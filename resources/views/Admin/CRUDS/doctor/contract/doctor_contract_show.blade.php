@@ -41,15 +41,7 @@
                                 <p><strong>Contract Start Date :</strong> {{ $contract->contract_start_date }}</p>
                                 <p><strong>Contract End Date :</strong> {{ $contract->contract_end_date }}</p>
                             </div>
-                            @if($contract->contract_end_date && \Carbon\Carbon::parse($contract->contract_end_date)->isFuture())
-                                <form action="{{ route('admin.doctor_contract_destroy', $contract->id) }}" method="POST" style="display: inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn  btn-danger text-center mt-1">Delete Contract</button>
-                                </form>
-                            @else
-                                <a href="{{ route('admin.doctor_contract_renewal', ['contract_id' => $contract->id, 'doctor_id' => $doctor->id]) }}" class="mt-2 text-center btn btn-warning">Renew Contract</a>
-                            @endif
+                            <a href="{{ route('admin.doctor_contract_renewal', ['contract_id' => $contract->id, 'doctor_id' => $doctor->id]) }}" class="mt-2 text-center btn btn-warning">Renew Contract</a>
                             <br /><br />
                             <div class="row">
                                 <div class="col-md-3">

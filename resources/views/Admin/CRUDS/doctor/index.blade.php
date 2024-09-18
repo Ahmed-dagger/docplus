@@ -22,7 +22,7 @@
             @if(auth()->guard('admin')->user()->hasPermission('doctors_create'))
 
                 <div>
-                    <button id="addBtn" class="btn btn-primary"> {{helperTrans('admin.Add Doctor')}}</button>
+                    <a href="{{route('admin.doctor_contract')}}" class="btn btn-primary"> {{helperTrans('admin.Add Doctor')}}</a>
                 </div>
             @endif
 
