@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{asset('frontend/style.css')}}" />
+    <link rel="stylesheet" href="{{ asset('frontend/style.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabickufi.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,21 +29,22 @@
     <header class="Header">
         <div class="d-flex align-items-center container-fluid">
             <div class="container-fluid justify-content-between" id="Logo">
-                <img src="{{asset('frontend')}}/img/Doctoria-Logo.png" class="Logo" alt="" />
+                <img src="{{ asset('frontend') }}/img/Doctoria-Logo.png" class="Logo" alt="" />
             </div>
 
             <div class="justify-content-center align-items-center pcMenu">
                 <ul class="d-flex menuListPC align-items-center justify-content-center">
-                    <a href="{{route('home')}}" class="text-decoration-none">
+                    <a href="{{ route('home') }}" class="text-decoration-none">
                         <li class="d-flex text-light">Home Page</li>
                     </a>
                     <a href="" class="text-decoration-none">
                         <li class="d-flex text-light">Contact US</li>
                     </a>
-                    <a href="{{route('privacy')}}" class="text-decoration-none">
+                    <a href="{{ route('privacy') }}" class="text-decoration-none">
                         <li class="d-flex text-light">Privacy Policy</li>
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.tailors.doctoria&hl=en" class="text-decoration-none">
+                    <a href="https://play.google.com/store/apps/details?id=com.tailors.doctoria&hl=en"
+                        class="text-decoration-none">
                         <li>
                             <button class="download">
                                 <svg class="saveicon" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"
@@ -85,12 +86,13 @@
                                     <li class="text-light font-weight-bold">Contact Us</li>
                                 </a>
                                 <hr class="text-light" />
-                                <a href="{{route('privacy')}}" class="text-decoration-none">
+                                <a href="{{ route('privacy') }}" class="text-decoration-none">
                                     <li class="text-light font-weight-bold">Privacy Policy</li>
                                 </a>
 
                                 <hr class="text-light" />
-                                <a href="https://play.google.com/store/apps/details?id=com.tailors.doctoria&hl=en" class="text-decoration-none justify-content-end">
+                                <a href="https://play.google.com/store/apps/details?id=com.tailors.doctoria&hl=en"
+                                    class="text-decoration-none justify-content-end">
                                     <li class="text-light font-weight-bold">
                                         <button class="download">
                                             <svg class="saveicon" stroke="currentColor" stroke-width="1.7"
@@ -123,20 +125,59 @@
         <div class="row g-3">
 
             <div class="col-sm-1">
-                <h1 class="text-left"> <a href="{{route('privacyAr')}}" class="text-decoration-none"><button class="btn btn-outline-danger"><img width="30" height="30"
-                    src="https://img.icons8.com/color/120/egypt-circular.png" alt="egypt-circular" />Ar</button></a>
+                <h1 class="text-left"> <a href="{{ route('privacyAr') }}" class="text-decoration-none"><button
+                            class="btn btn-outline-danger"><img width="30" height="30"
+                                src="https://img.icons8.com/color/120/egypt-circular.png"
+                                alt="egypt-circular" />Ar</button></a>
                 </h1>
                 <div class="sidebar">
-                    
+
                     <h2>Contents</h2>
                     <a class="text-decoration-none text-dark w-100" href="#introduction">Overview</a>
-                    <a class="text-decoration-none text-dark w-100" href="#information">Information</a>
-                    <a class="text-decoration-none text-dark w-100" href="#usage">Confiramtion</a>
-                    <a class="text-decoration-none text-dark w-100" href="#sharing">User Actions</a>
-                    <a class="text-decoration-none text-dark w-100" href="#rights">Your Rights</a>
-                    <a class="text-decoration-none text-dark w-100" href="#security">Security Measures</a>
-                    <a class="text-decoration-none text-dark w-100" href="#changes">Changes to This Policy</a>
-                    <a class="text-decoration-none text-dark w-100" href="#refund">Refund Policy</a>
+                    <a class="text-decoration-none text-dark w-100" href="#information">ONLINE STORE TERMS</a>
+                    <a class="text-decoration-none text-dark w-100" href="#usage">GENERAL CONDITIONS</a>
+                    <a class="text-decoration-none text-dark w-100" href="#sharing">ACCURACY, COMPLETENESS AND
+                        TIMELINESS OF INFORMATION</a>
+                    <a class="text-decoration-none text-dark w-100" href="#rights">MODIFICATIONS TO THE SERVICE AND
+                        PRICES</a>
+                    <a class="text-decoration-none text-dark w-100" href="#security">PRODUCTS OR SERVICES (if
+                        applicable)</a>
+                    <a class="text-decoration-none text-dark w-100" href="#changes">ACCURACY OF BILLING AND ACCOUNT
+                        INFORMATION</a>
+                    <a class="text-decoration-none text-dark w-100" href="#refund">OPTIONAL TOOLS</a>
+                    <a class="text-decoration-none text-dark w-100" href="#THIRDPARTY">THIRD-PARTY LINKS</a>
+                    <a class="text-decoration-none text-dark w-100" href="#USERCOMMENTS">USER COMMENTS, FEEDBACK AND
+                        OTHER SUBMISSIONS</a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#PERSONAL">PERSONAL INFORMATIONS</a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#ERRORS">ERRORS, INACCURACIES AND
+                        OMISSIONS</a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#PROHIBITED">PROHIBITED USES
+                    </a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#DISCLAIMER">DISCLAIMER OF WARRANTIES;
+                        LIMITATION OF LIABILITY
+                    </a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#INDEMNIFICATION">INDEMNIFICATION
+                    </a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#SEVERABILITY">SEVERABILITY
+                    </a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#TERMINATION">TERMINATION
+                    </a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#ENTIRE">ENTIRE AGREEMENT
+                    </a>
+
+                    <a class="text-decoration-none text-dark w-100" href="#GOVERNING">GOVERNING LAW
+                    </a>
+                    <a class="text-decoration-none text-dark w-100" href="#CHANGESterms">CHANGES TO TERMS OF SERVICE
+                    </a>
+
                 </div>
 
             </div>
@@ -147,112 +188,113 @@
                         <ol>
                             <li>
                                 <p>
-                                    By using the DoctoriaPlus app, the user automatically agrees to
-                                    the terms and conditions of use mentioned here. If you do not
-                                    agree to these terms, please do not use the app.
+                                    This website is operated by Doctoria. Throughout the site, the terms “we”, “us” and
+                                    “our” refer to Doctoria. Doctoria offers this website, including all information,
+                                    tools, and services available from this site to you, the user, conditioned upon your
+                                    acceptance of all terms, conditions, policies and notices stated here.
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    To access the services provided by the app, your registration is
-                                    required, along with the accurate completion of user
-                                    information.
+                                    By visiting our site and/ or purchasing something from us, you engage in our
+                                    “Service” and agree to be bound by the following terms and conditions (“Terms of
+                                    Service”, “Terms”), including those additional terms and conditions and policies
+                                    referenced herein and/or available by hyperlink. These Terms of Service apply to all
+                                    users of the site, including without limitation users who are browsers, vendors,
+                                    customers, merchants, and/ or contributors of content.
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    The service recipient bears full responsibility for the accuracy
-                                    of the data entered by them in the app and any consequences that
-                                    may arise from it.
+                                    Please read these Terms of Service carefully before accessing or using our website.
+                                    By accessing or using any part of the site, you agree to be bound by these Terms of
+                                    Service. If you do not agree to all the terms and conditions of this agreement, then
+                                    you may not access the website or use any services. If these Terms of Service are
+                                    considered an offer, acceptance is expressly limited to these Terms of Service.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Any new features or tools which are added to the current store shall also be subject
+                                    to the Terms of Service. You can review the most current version of the Terms of
+                                    Service at any time on this page. We reserve the right to update, change or replace
+                                    any part of these Terms of Service by posting updates and/or changes to our website.
+                                    It is your responsibility to check this page periodically for changes. Your
+                                    continued use of or access to the website following the posting of any changes
+                                    constitutes acceptance of those changes.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Our store is hosted on Shopify Inc. They provide us with the online e-commerce
+                                    platform that allows us to sell our products and services to you.
                                 </p>
                             </li>
                         </ol>
                     </section>
                     <section id="information">
-                        <h2>Concerns The User</h2>
+                        <h2>ONLINE STORE TERMS</h2>
                         <ol>
                             <li>
                                 <p>
-                                    Users are prohibited from using the DoctpriaPlus app in ways
-                                    that disrupt the service or cause harm to the app or any other
-                                    person. The use of the app is solely the user's responsibility,
-                                    and the user undertakes not to use the app for any illegal or
-                                    unlawful purpose. The DoctoriaPlus app disclaims any
-                                    responsibility for illegal use of the app by users and may take
-                                    legal action if any user violates applicable laws or
-                                    regulations.
+                                    By agreeing to these Terms of Service, you represent that you are at least the age
+                                    of majority in your state or province of residence, or that you are the age of
+                                    majority in your state or province of residence, and you have given us your consent
+                                    to allow any of your minor dependents to use this site.
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    The user bears full responsibility for their use of the
-                                    DoctoriaPlus app and the content provided, as well as the
-                                    consequences thereof.
+                                    You may not use our products for any illegal or unauthorized purpose nor may you, in
+                                    the use of the Service, violate any laws in your jurisdiction (including but not
+                                    limited to copyright laws).
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    The DoctoriaPlus app reserves the right to terminate the account
-                                    of any user who violates the terms of use without prior notice.
+                                    You must not transmit any worms or viruses or any code of a destructive nature.
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    Users agree to indemnify and hold harmless the DoctoriaPlus app
-                                    and its owners and officers from any losses or damages arising
-                                    from their use of the app.
+                                    A breach or violation of any of the Terms will result in an immediate termination of
+                                    your Services.
                                 </p>
                             </li>
-                            <li>
-                                <p>
-                                    The app is prohibited for use by minors without the supervision
-                                    and consent of a parent or legal guardian. Users undertake to
-                                    provide accurate information about their age and identity. If
-                                    any unauthorized use of the app by a minor is discovered, the
-                                    app has the right to take necessary legal action and block the
-                                    accounts in violation.
-                                </p>
-                            </li>
+
                         </ol>
                     </section>
                     <section id="usage">
-                        <h2>How We Use Your Information</h2>
+                        <h2>GENERAL CONDITIONS</h2>
                         <ol>
                             <li>
                                 <p>
-                                    Payment of fees is required in advance when requesting the
-                                    service, with the fees clearly stated in the app during the
-                                    ordering process.
+                                    We reserve the right to refuse service to anyone for any reason at any time.
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    The user must verify that the data of the home healthcare
-                                    provider, including the individual's name as displayed on their
-                                    identification card, matches the data presented when selecting
-                                    the provider. This is the sole responsibility of the user, who
-                                    bears full responsibility for any discrepancies in the data and
-                                    any resulting consequences.
+                                    You understand that your content (not including credit card information), may be
+                                    transferred unencrypted and involve (a) transmissions over various networks; and (b)
+                                    changes to conform and adapt to technical requirements of connecting networks or
+                                    devices. Credit card information is always encrypted during transfer over networks.
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    The user must comply with the specified limits of the required
-                                    service indicated during the home care service booking process.
-                                    Once the caregiver arrives on-site, the user is not entitled to
-                                    request additional services.
+                                    You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of
+                                    the Service, use of the Service, or access to the Service or any contact on the
+                                    website through which the service is provided, without express written permission by
+                                    us.
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    The user must adhere to the specified service limits established
-                                    during the booking of home care services. Once the caregiver
-                                    arrives at the location, the user is not entitled to request
-                                    additional services beyond those that were pre-approved at the
-                                    time of booking.
+                                    The headings used in this agreement are included for convenience only and will not
+                                    limit or otherwise affect these Terms.
                                 </p>
                             </li>
-        
+
                             <li>
                                 <p>
                                     Users are prohibited from interacting with service providers
@@ -264,207 +306,398 @@
                         </ol>
                     </section>
                     <section id="sharing">
-                        <h2>User actions</h2>
+                        <h2>ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION</h2>
                         <ol>
                             <li>
                                 <p>
-                                    The application is not responsible for the individual actions of
-                                    the service providers outside the scope of services provided
-                                    through the app, including but not limited to harassment or
-                                    theft.
+                                    We are not responsible if information made available on this site is not accurate,
+                                    complete, or current. The material on this site is provided for general information
+                                    only and should not be relied upon or used as the sole basis for making decisions
+                                    without consulting primary, more accurate, more complete, or more timely sources of
+                                    information. Any reliance on the material on this site is at your own risk.
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    Users must clearly and accurately specify the details of the
-                                    required service during the booking process and are obligated to
-                                    fill in all required fields in the booking form. The user is
-                                    responsible for the accuracy and correctness of the information
-                                    provided and commits to providing complete and correct
-                                    information in line with the requested service.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    DoctoriaPlus reserves the right to change service policies and
-                                    prices without prior notice, while notifying users of any
-                                    changes through the application.
+                                    This site may contain certain historical information. Historical information,
+                                    necessarily, is not current and is provided for your reference only. We reserve the
+                                    right to modify the contents of this site at any time, but we have no obligation to
+                                    update any information on our site. You agree that it is your responsibility to
+                                    monitor changes to our site.
                                 </p>
                             </li>
                         </ol>
                     </section>
                     <section id="rights">
-                        <h2>Your Rights</h2>
+                        <h2>MODIFICATIONS TO THE SERVICE AND PRICES</h2>
                         <ol>
                             <li>
                                 <p>
-                                    If you wish to request any service provided through the
-                                    application, you may be required to provide certain information
-                                    related to your service purchase, including, but not limited to,
-                                    your credit card number and its expiration date. The user
-                                    acknowledges and agrees to the following:
-        
-                                <ul>
-                                    <li>
-                                        <p>They have the legal right to use any credit card or other payment method concerning
-                                            any purchase</p>
-                                    </li>
-                                    <li>
-                                        <p>The information they provide is correct and complete. </p>
-                                    </li>
-                                </ul>
+                                    Prices for our products are subject to change without notice.
                                 </p>
                             </li>
                             <li>
-                                <p>DoctoriaPlus reserves the right to refuse or cancel the user’s request at any time and for
-                                    unspecified reasons, including, but not limited to, unavailability of the service, errors in
-                                    description or pricing, or in cases of order errors, or for other reasons. In case of
-                                    refunds, this will be done only through the original payment method. </p>
+                                <p>We reserve the right at any time to modify or discontinue the Service (or any part or
+                                    content thereof) without notice at any time. </p>
                             </li>
                             <li>
-                                <p>Special terms for home visits:
-                                <ul>
-                                    <li>
-                                        <p>If the user requests a female medical caregiver for home service, a female aged 18 or
-                                            older must be present at the residence. </p>
-                                    </li>
-                                    <li>
-                                        <p>The user is required to pay the full visit amount if the service provider arrives at
-                                            the location and waits 10 minutes outside the door. </p>
-                                    </li>
-                                    <li>
-                                        <p>The user has the right to cancel a home care visit request no later than 12 hours
-                                            before the appointment while retaining the amount paid as credit. </p>
-                                    </li>
-        
-                                    <li>
-                                        <p>If the user cancels the home care visit appointment within 11 hours of the visit, the
-                                            service provider is entitled to the full amount. </p>
-                                    </li>
-                                </ul>
+                                <p>We shall not be liable to you or to any third-party for any modification, price
+                                    change, suspension or discontinuance of the Service.
+
                                 </p>
                             </li>
                         </ol>
                     </section>
                     <section id="security">
-                        <h2>Security Measures</h2>
+                        <h2>PRODUCTS OR SERVICES (if applicable)</h2>
                         <ol>
                             <li>
-                                <p>The DoctoriaPlus app is committed to protecting users' privacy and the confidentiality of
-                                    their personal data in accordance with relevant laws and regulations. The app also reserves
-                                    the right to use users' information for research and statistical analysis purposes to
-                                    improve its services. </p>
+                                <p>Certain products or services may be available exclusively online through the website.
+                                    These products or services may have limited quantities and are subject to return or
+                                    exchange only according to our Return Policy. </p>
                             </li>
                             <li>
-                                <p>We would like to emphasize that the information provided through the app is intended for
-                                    guidance purposes only and should not be considered a substitute for professional medical
-                                    care. </p>
+                                <p>We have made every effort to display as accurately as possible the colors and images
+                                    of our products that appear at the store. We cannot guarantee that your computer
+                                    monitor's display of any color will be accurate. </p>
                             </li>
                             <li>
-                                <p>The use of the service is the personal responsibility of the user, as the service is provided
-                                    on an "as is" and "as available" basis, without any warranties of any kind, whether express
-                                    or implied. Under this provision, it cannot be guaranteed that the service will operate
-                                    uninterrupted, securely, or be available at any specific time or location, nor can it
-                                    guarantee the correction of any errors or defects, or that the results from using the
-                                    service will meet the user's specific needs. </p>
+                                <p>We reserve the right, but are not obligated, to limit the sales of our products or
+                                    Services to any person, geographic region, or jurisdiction. We may exercise this
+                                    right on a case-by-case basis. We reserve the right to limit the quantities of any
+                                    products or services that we offer. All descriptions of products or product pricing
+                                    are subject to change at any time without notice, at the sole discretion of us. We
+                                    reserve the right to discontinue any product at any time. Any offer for any product
+                                    or service made on this site is void where prohibited. </p>
+                            </li>
+                            <li>
+                                <p>We do not warrant that the quality of any products, services, information, or other
+                                    material purchased or obtained by you will meet your expectations, or that any
+                                    errors in the Service will be corrected. </p>
                             </li>
                         </ol>
                     </section>
                     <section id="changes">
-                        <h2>Changes to This Policy</h2>
+                        <h2>ACCURACY OF BILLING AND ACCOUNT INFORMATION</h2>
                         <ol>
                             <li>
-                                <p>The DoctoriaPlus app reserves the right to periodically update the terms and conditions
-                                    policy, and any changes will be published on the app to affirm our commitment to the policy.
+                                <p>We reserve the right to refuse any order you place with us. We may, in our sole
+                                    discretion, limit or cancel quantities purchased per person, per household or per
+                                    order. These restrictions may include orders placed by or under the same customer
+                                    account, the same credit card, and/or orders that use the same billing and/or
+                                    shipping address. If we make a change to or cancel an order, we may attempt to
+                                    notify you by contacting the e‑mail and/or billing address/phone number provided at
+                                    the time the order was made. We reserve the right to limit or prohibit orders that,
+                                    in our sole judgment, appear to be placed by dealers, resellers or distributors.
                                 </p>
                             </li>
                             <li>
-                                <p>These terms are governed and interpreted in accordance with the laws of the Arab Republic of
-                                    Egypt, and the failure to enforce any right or provision of these terms shall not be deemed
-                                    a waiver of such rights in any way. If any provision of these terms is found to be invalid
-                                    or unenforceable by a court, the remaining provisions shall remain in effect. </p>
-                            </li>
-                            <li>
-                                <p>The DoctoriaPlus app reserves the right to suspend or discontinue the services offered
-                                    through the app for maintenance and updates, and we will make every effort to provide users
-                                    with advance notice in such cases. </p>
-                            </li>
-                            <li>
-                                <p>The DoctoriaPlus app is committed to complying with all applicable laws and regulations in
-                                    the countries where we provide our services, and we respect relevant international laws.
-                                </p>
-                            </li>
-        
-                            <li>
-                                <p>We provide communication channels for users to submit feedback, inquiries, and complaints,
-                                    and we are committed to responding as quickly as possible to all inquiries.</p>
+                                <p>You agree to provide current, complete, and accurate purchase and account information
+                                    for all purchases made at our store. You agree to promptly update your account and
+                                    other information, including your email address and credit card numbers and
+                                    expiration dates, so that we can complete your transactions and contact you as
+                                    needed. </p>
                             </li>
                         </ol>
                     </section>
                     <section id="refund">
-                        <h2>Refund Policy</h2>
+                        <h2>OPTIONAL TOOLS</h2>
                         <ol>
                             <li>
-                                <p>Home care visits:</p>
-                                <ul>
-                                    <li>
-                                        <p>The user is required to pay the full amount for the visit if the service
-                                            provider arrives at the location and waits for 10 minutes in front of the
-                                            door.
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>The user has the right to cancel their home care visit request up to 12 hours
-                                            before
-                                            the scheduled time, while retaining the amount paid as credit.
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>If the user cancels a home care visit appointment at least 11 hours before
-                                            the scheduled time, the service provider is entitled to the full payment.
-                                        </p>
-                                    </li>
-                                </ul>
+                                <p>We may provide you with access to third-party tools over which we neither monitor nor
+                                    have any control nor input.</p>
 
 
                             </li>
 
                             <li>
-                                <p>Online consultation:</p>
-                                <ul>
+                                <p>You acknowledge and agree that we provide access to such tools ”as is” and “as
+                                    available” without any warranties, representations, or conditions of any kind and
+                                    without any endorsement. We shall have no liability whatsoever arising from or
+                                    relating to your use of optional third-party tools.</p>
+                            </li>
 
-                                    <li>
-                                        <p>The user is required to pay the full consultation fee if a service provider
-                                            is present, whether for a specialized exam or an immediate consultation, and
-                                            to wait for 10 minutes.</p>
-                                    </li>
-                                    <li>
-                                        <p>The user has the right to cancel the online appointment with the specialist
-                                            doctor up to 12 hours before the scheduled time while retaining the paid
-                                            amount as credit.</p>
-                                    </li>
-
-                                    <li>
-                                        <p>The user is entitled to retain the amount paid as credit if, during an online
-                                            consultation with a specialist doctor or an immediate consultation, a doctor
-                                            is not available within 10 minutes.</p>
-                                    </li>
-                                    <li>
-                                        <p>If the user cancels their appointment with the specialist more than 11 hours
-                                            before the scheduled visit, the service provider is entitled to receive the
-                                            full amount.</p>
-                                    </li>
-
-                                </ul>
+                            <li>
+                                <p>Any use by you of optional tools offered through the site is entirely at your own
+                                    risk and discretion and you should ensure that you are familiar with and approve of
+                                    the terms on which tools are provided by the relevant third-party provider(s).</p>
+                            </li>
+                            <li>
+                                <p>We may also, in the future, offer new services and/or features through the website
+                                    (including, the release of new tools and resources). Such new features and/or
+                                    services shall also be subject to these Terms of Service.</p>
                             </li>
                         </ol>
                     </section>
+
+                    <section id="THIRDPARTY">
+                        <h2>THIRD-PARTY LINKS</h2>
+                        <ol>
+                            <li>
+                                <p>Certain content, products and services available via our Service may include
+                                    materials from third parties.</p>
+                            </li>
+
+                            <li>
+                                <p>Third-party links on this site may direct you to third-party websites that are not
+                                    affiliated with us. We are not responsible for examining or evaluating the content
+                                    or accuracy and we do not warrant and will not have any liability or responsibility
+                                    for any third-party materials or websites, or for any other materials, products, or
+                                    services of third parties.</p>
+                            </li>
+
+                            <li>
+                                <p>We are not liable for any harm or damages related to the purchase or use of goods,
+                                    services, resources, content, or any other transactions made in connection with any
+                                    third-party websites. Please review carefully the third-party's policies and
+                                    practices and make sure you understand them before you engage in any transaction.
+                                    Complaints, claims, concerns, or questions regarding third-party products should be
+                                    directed to the third-party.</p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="USERCOMMENTS">
+                        <h2>USER COMMENTS, FEEDBACK AND OTHER SUBMISSIONS</h2>
+                        <ol>
+                            <li>
+                                <p>If, at our request, you send certain specific submissions (for example contest
+                                    entries) or without a request from us you send creative ideas, suggestions,
+                                    proposals, plans, or other materials, whether online, by email, by postal mail, or
+                                    otherwise (collectively, 'comments'), you agree that we may, at any time, without
+                                    restriction, edit, copy, publish, distribute, translate and otherwise use in any
+                                    medium any comments that you forward to us. We are and shall be under no obligation
+                                    (1) to maintain any comments in confidence; (2) to pay compensation for any
+                                    comments; or (3) to respond to any comments.</p>
+                            </li>
+
+                            <li>
+                                <p>We may, but have no obligation to, monitor, edit or remove content that we determine
+                                    in our sole discretion are unlawful, offensive, threatening, libelous, defamatory,
+                                    pornographic, obscene or otherwise objectionable or violates any party’s
+                                    intellectual property or these Terms of Service.</p>
+                            </li>
+
+                            <li>
+                                <p>You agree that your comments will not violate any right of any third-party, including
+                                    copyright, trademark, privacy, personality or other personal or proprietary right.
+                                    You further agree that your comments will not contain libelous or otherwise
+                                    unlawful, abusive, or obscene material, or contain any computer virus or other
+                                    malware that could in any way affect the operation of the Service or any related
+                                    website. You may not use a false e‑mail address, pretend to be someone other than
+                                    yourself, or otherwise mislead us or third parties as to the origin of any comments.
+                                    You are solely responsible for any comments you make and their accuracy. We take no
+                                    responsibility and assume no liability for any comments posted by you or any
+                                    third-party.</p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="PERSONAL">
+                        <h2>PERSONAL INFORMATION</h2>
+                        <ol>
+                            <li>
+                                <p>Your submission of personal information through the store is governed by our Privacy
+                                    Policy. To view our Privacy Policy.</p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="ERRORS">
+                        <h2>ERRORS, INACCURACIES AND OMISSIONS</h2>
+                        <ol>
+                            <li>
+                                <p>Occasionally there may be information on our site or in the Service that contains
+                                    typographical errors, inaccuracies or omissions that may relate to product
+                                    descriptions, pricing, promotions, offers, product shipping charges, transit times
+                                    and availability. We reserve the right to correct any errors, inaccuracies or
+                                    omissions, and to change or update information or cancel orders if any information
+                                    in the Service or on any related website is inaccurate at any time without prior
+                                    notice (including after you have submitted your order).</p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    We undertake no obligation to update, amend or clarify information in the Service or
+                                    on any related website, including without limitation, pricing information, except as
+                                    required by law. No specified update or refresh date applied in the Service or on
+                                    any related website, should be taken to indicate that all information in the Service
+                                    or on any related website has been modified or updated.
+                                </p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="PROHIBITED">
+                        <h2>PROHIBITED USES</h2>
+                        <ol>
+                            <li>
+                                <p>In addition to other prohibitions as set forth in the Terms of Service, you are
+                                    prohibited from using the site or its content: (a) for any unlawful purpose; (b) to
+                                    solicit others to perform or participate in any unlawful acts; (c) to violate any
+                                    international, federal, provincial or state regulations, rules, laws, or local
+                                    ordinances; (d) to infringe upon or violate our intellectual property rights or the
+                                    intellectual property rights of others; (e) to harass, abuse, insult, harm, defame,
+                                    slander, disparage, intimidate, or discriminate based on gender, sexual orientation,
+                                    religion, ethnicity, race, age, national origin, or disability; (f) to submit false
+                                    or misleading information; (g) to upload or transmit viruses or any other type of
+                                    malicious code that will or may be used in any way that will affect the
+                                    functionality or operation of the Service or of any related website, other websites,
+                                    or the Internet; (h) to collect or track the personal information of others; (i) to
+                                    spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or
+                                    immoral purpose; or (k) to interfere with or circumvent the security features of the
+                                    Service or any related website, other websites, or the Internet. We reserve the
+                                    right to terminate your use of the Service or any related website for violating any
+                                    of the prohibited uses.</p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="DISCLAIMER">
+                        <h2>DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY</h2>
+                        <ol>
+                            <li>
+                                <p>We do not guarantee, represent, or warrant that your use of our service will be
+                                    uninterrupted, timely, secure or error-free.</p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    We do not warrant that the results that may be obtained from the use of the service
+                                    will be accurate or reliable. </p>
+                            </li>
+                            <li>
+                                <p>
+
+                                    You agree that from time to time we may remove the service for indefinite periods of
+                                    time or cancel the service at any time, without notice to you.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    You expressly agree that your use of, or inability to use, the service is at your
+                                    sole risk. The service and all products and services delivered to you through the
+                                    service are (except as expressly stated by us) provided 'as is' and 'as available'
+                                    for your use, without any representation, warranties or conditions of any kind,
+                                    either express or implied, including all implied warranties or conditions of
+                                    merchantability, merchantable quality, fitness for a particular purpose, durability,
+                                    title, and non-infringement.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    In no case shall Doctoria, our directors, officers, employees, affiliates, agents,
+                                    contractors, interns, suppliers, service providers or licensors be liable for any
+                                    injury, loss, claim, or any direct, indirect, incidental, punitive, special, or
+                                    consequential damages of any kind, including, without limitation lost profits, lost
+                                    revenue, lost savings, loss of data, replacement costs, or any similar damages,
+                                    whether based in contract, tort (including negligence), strict liability or
+                                    otherwise, arising from your use of any of the service or any products procured
+                                    using the service, or for any other claim related in any way to your use of the
+                                    service or any product, including, but not limited to, any errors or omissions in
+                                    any content, or any loss or damage of any kind incurred as a result of the use of
+                                    the service or any content (or product) posted, transmitted, or otherwise made
+                                    available via the service, even if advised of their possibility. Because some states
+                                    or jurisdictions do not allow the exclusion or the limitation of liability for
+                                    consequential or incidental damages, in such states or jurisdictions, our liability
+                                    shall be limited to the maximum extent permitted by law.
+                                </p>
+                            </li>
+
+
+                        </ol>
+                    </section>
+                    <section id="INDEMNIFICATION">
+                        <h2>INDEMNIFICATION</h2>
+                        <ol>
+                            <li>
+                                <p>You agree to indemnify, defend and hold harmless Doctoria and our parent,
+                                    subsidiaries, affiliates, partners, officers, directors, agents, contractors,
+                                    licensors, service providers, subcontractors, suppliers, interns and employees,
+                                    harmless from any claim or demand, including reasonable attorneys’ fees, made by any
+                                    third-party due to or arising out of your breach of these Terms of Service or the
+                                    documents they incorporate by reference, or your violation of any law or the rights
+                                    of a third-party.</p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="SEVERABILITY">
+                        <h2>SEVERABILITY</h2>
+                        <ol>
+                            <li>
+                                <p>If any provision of these Terms of Service is determined to be unlawful, void or
+                                    unenforceable, such provision shall nonetheless be enforceable to the fullest extent
+                                    permitted by applicable law, and the unenforceable portion shall be deemed to be
+                                    severed from these Terms of Service, such determination shall not affect the
+                                    validity and enforceability of any other remaining provisions.</p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="TERMINATION">
+                        <h2>TERMINATION</h2>
+                        <ol>
+                            <li>
+                                <p>The obligations and liabilities of the parties incurred prior to the termination date
+                                    shall survive the termination of this agreement for all purposes.</p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    These Terms of Service are effective unless and until terminated by either you or
+                                    us. You may terminate these Terms of Service at any time by notifying us that you no
+                                    longer wish to use our Services, or when you cease using our site. </p>
+                            </li>
+                            <li>
+                                <p>
+                                    If in our sole judgment you fail, or we suspect that you have failed, to comply with
+                                    any term or provision of these Terms of Service, we also may terminate this
+                                    agreement at any time without notice and you will remain liable for all amounts due
+                                    up to and including the date of termination; and/or accordingly may deny you access
+                                    to our Services (or any part thereof). </p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="ENTIRE">
+                        <h2>ENTIRE AGREEMENT</h2>
+                        <ol>
+                            <li>
+                                <p>The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service). </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party. </p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="GOVERNING">
+                        <h2>GOVERNING LAW</h2>
+                        <ol>
+                            <li>
+                                <p>These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of Egypt.</p>
+                            </li>
+                        </ol>
+                    </section>
+                    <section id="CHANGESterms">
+                        <h2>CHANGES TO TERMS OF SERVICE</h2>
+                        <ol>
+                            <li>
+                                <p>You can review the most current version of the Terms of Service at any time at this page.</p>
+                            </li>
+
+                            <li>
+                                <p>We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</p>
+                            </li>
+                        </ol>
+                    </section>
+
                 </div>
             </div>
 
         </div>
-        
-        
+
+
     </div>
 
     <footer class="bg-dark py-2 text-center">
@@ -509,21 +742,21 @@
         });
     </script>
     <script>
- window.addEventListener('scroll', function() {
-    var sidebar = document.getElementById('sidebar');
-    var stopElement = document.getElementById('section2'); // The element where the sidebar should stop
-    
-    var sidebarRect = sidebar.getBoundingClientRect();
-    var stopElementRect = stopElement.getBoundingClientRect();
+        window.addEventListener('scroll', function() {
+            var sidebar = document.getElementById('sidebar');
+            var stopElement = document.getElementById('section2'); // The element where the sidebar should stop
 
-    if (stopElementRect.top <= sidebarRect.bottom) {
-        sidebar.style.position = 'absolute';
-        sidebar.style.top = (stopElementRect.top - sidebarRect.height) + 'px';
-    } else {
-        sidebar.style.position = 'fixed';
-        sidebar.style.top = '0';
-    }
-});
+            var sidebarRect = sidebar.getBoundingClientRect();
+            var stopElementRect = stopElement.getBoundingClientRect();
+
+            if (stopElementRect.top <= sidebarRect.bottom) {
+                sidebar.style.position = 'absolute';
+                sidebar.style.top = (stopElementRect.top - sidebarRect.height) + 'px';
+            } else {
+                sidebar.style.position = 'fixed';
+                sidebar.style.top = '0';
+            }
+        });
     </script>
 </body>
 
