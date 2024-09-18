@@ -106,7 +106,8 @@ Route::group(
         Route::get('get_categories_by_main_service', [\App\Http\Controllers\Admin\DoctorController::class, 'get_categories_by_main_service'])->name('admin.get_categories_by_main_service');
 
         // <-- Start Doctor Contract -->
-        Route::get('doctor_contract/{id}', [\App\Http\Controllers\Admin\DoctorController::class, 'doctor_contract'])->name('admin.doctor_contract');
+        Route::get('doctor_contract', [\App\Http\Controllers\Admin\DoctorController::class, 'doctor_contract'])->name('admin.doctor_contract');
+        Route::post('/doctors/contracts/store', [\App\Http\Controllers\Admin\DoctorController::class, 'addDoctorContract'])->name('admin.addDoctor');
         Route::post('/doctors/{doctor}/contracts/store', [\App\Http\Controllers\Admin\DoctorController::class, 'addDoctorContract'])->name('addDoctorContract');
         Route::get('/doctors/contracts/{contract}', [\App\Http\Controllers\Admin\DoctorController::class, 'showContract'])->name('admin.doctor_contract_show');
         Route::delete('/doctors/contracts/{contract}', [\App\Http\Controllers\Admin\DoctorController::class, 'destroyContract'])->name('admin.doctor_contract_destroy');

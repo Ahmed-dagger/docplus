@@ -263,16 +263,41 @@ class DoctorController extends Controller
 
 
     // -- Start Doctor Contract Logic -- //
-    public function doctor_contract($id) {
-        $doctor=Doctor::findOrFail($id);
-        return view('Admin.CRUDS.doctor.contract.contract',compact('doctor'));
+    public function doctor_contract() {
+        //$doctor=Doctor::findOrFail($id);
+        $categories=Category::whereIn('slug', ['doctors', 'visit_doctor', 'consultation'])->get();
+
+        $specializations=Specialization::get();
+
+        $governorates=Governorate::get();
+        $experiences=Experience::get();
+
+        return view('Admin.CRUDS.doctor.contract.contract',compact('specializations','categories','governorates','experiences'));
     }
 
-    public function addDoctorContract(Request $request, Doctor $doctor) {
+    public function addDoctorContract(Request $request) {
         $request->validate([
-            'doctor_id' => 'required|exists:doctors,id',
+            'name'          => 'required',
+            'email'         => "required|email|unique:doctors,email",
+            'nickname'      => 'required|unique:doctors,nickname',
+            'phone'             => 'required|unique:patients,phone|unique:doctors,phone',
+            'private_number'    => 'required',
+            'password'  => 'required|min:6',
+            'gender'=>'required|in:male,female',
+            'specialization_id'=>'required|exists:specializations,id',
+            'sub_specialization_id'=>'required|exists:specializations,id',
+            'governorate_id'=>'required|exists:governorates,id',
+            'city_id'=>'required|exists:cities,id',
+            'lang'=>'required',
+            'weight'=>'nullable',
+            'location'=>'required',
+            'is_popular'=>'required|in:0,1',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp',
+            'latitude'=>'required',
+            'longitude'=>'required',
+            'experience_years'=>'nullable',
             'contract_start_date' => 'required|date',
-            'contract_end_date' => 'required|date',
+            'contract_end_date' => 'required|date|after:contract_start_date',
             'home_care_net_price' => 'nullable|numeric',
             'home_care_gross_price' => 'nullable|numeric',
             'home_care_discount' => 'nullable|string',
@@ -289,6 +314,19 @@ class DoctorController extends Controller
             'attach_price_list' => 'nullable|file|mimes:pdf,doc,docx,jpg,png',
             'contract_note' => 'nullable|string',
         ]);
+
+        // Create the doctor
+        $doctorData = $request->only(['name', 'email', 'nickname', 'phone', 'private_number', 'password', 'gender', 'specialization_id',
+        'sub_specialization_id', 'governorate_id', 'city_id', 'lang', 'weight', 'location', 'is_popular', 'image', 'service_price_online',
+        'service_price_home', 'latitude', 'longitude', 'experience_years']);
+        $doctorData['password'] = bcrypt($request->password);
+        
+        if ($request->hasFile('image')) {
+            $doctorData['image'] = $this->uploadFiles('doctors', $request->file('image'), null);
+        }
+
+        $doctor = Doctor::create($doctorData);
+
         $doctorContract = new DoctorContract();
         $doctorContract->doctor_id = $doctor->id;
         $doctorContract->contract_start_date = $request->contract_start_date;

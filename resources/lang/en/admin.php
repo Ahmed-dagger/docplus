@@ -375,4 +375,6 @@
   'Contract Renewal ' => 'Contract Renewal ',
   'Update Provider Successfully' => 'Update Provider Successfully',
   'Renwal ' => 'Renwal ',
+  'Add Doctor and Contract' => 'Add Doctor and Contract',
+  'Select Radiology Center' => 'Select Radiology Center',
 );
