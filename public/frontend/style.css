@@ -403,6 +403,28 @@ body {
     font-family: "Droid Arabic Kufi", serif;
 }
 
+.TitleOfIcon {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.ContantFieldStyling {
+    background-color: #eeeeee;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    height: 60px;
+    padding-left: 30px;
+}
+
+.MessageFieldStyling {
+    background-color: #eeeeee;
+    border: none;
+    outline: none;
+    color: #000;
+    border-radius: 12px;
+}
+
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;

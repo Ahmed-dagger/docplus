@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome')->name('home');
 Route::view('/en/Privacy','Privacy')->name('privacy');
 Route::view('/ar/Privacy','PrivacyArabic')->name('privacyAr');
+Route::view('/en/Terms','Terms')->name('Terms');
+Route::view('/en/Contact','Contact')->name('Contact');
 
 Route::get('/reply',function (){
     return view('Pdf.reply');

@@ -60,11 +60,14 @@
             <a href="/" class="text-decoration-none">
               <li class="d-flex text-light">Home Page</li>
             </a>
-            <a href="" class="text-decoration-none">
+            <a href="{{ route('Contact') }}" class="text-decoration-none">
               <li class="d-flex text-light">Contact US</li>
             </a>
             <a href="{{route('privacy')}}" class="text-decoration-none">
-              <li class="d-flex text-light">Privacy Policy</li>
+              <li class="d-flex text-light">Privacy and Refund</li>
+            </a>
+            <a href="{{route('Terms')}}" class="text-decoration-none">
+              <li class="d-flex text-light">Terms and Conditions</li>
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.tailors.doctoria&hl=en" class="text-decoration-none">
               <li>
@@ -129,15 +132,20 @@
                     ><li class="text-light font-weight-bold">Home Page</li></a
                   >
                   <hr class="text-light" />
-                  <a href="" class="text-decoration-none"
+                  <a href="{{ route('Contact') }}" class="text-decoration-none"
                     ><li class="text-light font-weight-bold">Contact Us</li></a
                   >
                   <hr class="text-light" />
-                  <a href="" class="text-decoration-none"
-                    ><li class="text-light font-weight-bold">
-                      Privacy Policy
-                    </li></a
-                  >
+                  <a href="{{ route('privacy') }}" class="text-decoration-none">
+                    <li class="text-light font-weight-bold">Privacy and Refund</li>
+                </a>
+
+                  <a href="{{ route('Terms') }}" class="text-decoration-none">
+                    
+                    <li class="text-light font-weight-bold">
+                      Terms and Conditions
+                    </li>
+                  </a>
 
                   <hr class="text-light" />
                   <a href="https://play.google.com/store/apps/details?id=com.tailors.doctoria&hl=en" class="text-decoration-none justify-content-end"
